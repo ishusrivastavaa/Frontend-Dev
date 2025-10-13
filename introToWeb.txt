@@ -1,0 +1,142 @@
+
+1. Difference between Frontend, Backend, and Full-Stack Development
+Type	Description	Languages/Technologies	Real-World Example
+Frontend	The visual part of a website that users see and interact with.	HTML, CSS, JavaScript, React, Vue	The buttons, colors, and layout you see on Amazon’s homepage.
+Backend	The server-side part that handles logic, data storage, and communication with the database.	Node.js, Express, Python (Django/Flask), PHP, Java	When you click “Login” on a site, the backend checks your credentials in the database.
+Full Stack	A developer who works on both frontend and backend.	Combination of frontend + backend tools	A developer building an entire app like a food delivery site — designing pages and managing orders/data.
+
+
+
+2. Simple Diagram: Client-Server Model
++-------------+           Request (HTTP)           +-----------------+
+|             | ---------------------------------> |                 |
+|   Browser   |                                    |    Web Server   |
+|  (Client)   | <--------------------------------- |                 |
++-------------+           Response (HTML)          +-----------------+
+
+
+Explanation:
+
+The client (browser) sends a request (like typing www.google.com).
+
+The server processes the request and sends back the page content (HTML/CSS/JS).
+
+
+
+3. How a Browser Requests and Displays a Web Page
+
+Step-by-Step Process:
+
+You type a URL (e.g., www.example.com) in the browser.
+
+The browser contacts the DNS server to find the IP address of that domain.
+
+It sends an HTTP request to the web server at that IP address.
+
+The web server processes the request and sends back an HTTP response containing the HTML.
+
+The browser parses the HTML, downloads CSS, JS, and images.
+
+The rendering engine builds and displays the final web page visually.
+
+
+4. Tools Required to Set Up a Web Development Environment
+Tool	Purpose
+VS Code	Code editor for writing HTML, CSS, JS, and backend code.
+Web Browser (Chrome/Firefox)	To view and test your web pages.
+Node.js & npm	For running JavaScript outside the browser and managing packages.
+Git & GitHub	For version control and storing your projects online.
+Live Server Extension	Instantly reloads your webpage when you make changes.
+
+
+5. What is a Web Server?
+
+A web server is software or hardware that serves web pages to users upon request.
+It receives HTTP requests and sends back HTTP responses.
+
+Examples:
+
+Apache HTTP Server
+
+Nginx
+
+Microsoft IIS
+
+Node.js (using Express)
+
+LiteSpeed
+
+
+6. Roles in a Web Development Project
+Role	Responsibilities
+Frontend Developer	Builds user interfaces with HTML, CSS, and JavaScript; ensures responsive design and usability.
+Backend Developer	Handles logic, APIs, authentication, and communication with the database.
+Database Administrator (DBA)	Designs, maintains, and secures the database; ensures backups and performance tuning.
+
+
+7. Install VS Code and Configure for HTML, CSS, and JS
+
+Steps:
+
+Download VS Code from https://code.visualstudio.com
+.
+
+Install Extensions:
+
+Live Server (for preview)
+
+Prettier (for code formatting)
+
+HTML CSS Support
+
+JavaScript (ES6) Code Snippets
+
+Create a folder → open it in VS Code → make files:
+
+index.html
+
+style.css
+
+script.js
+
+Right-click index.html → Open with Live Server.
+
+📸 (Take a screenshot of VS Code showing your files and open webpage for submission.)
+
+
+8. Difference between Static and Dynamic Websites
+Type	Description	Example
+Static Website	Same content for every visitor; built with only HTML, CSS, JS.	A portfolio website with fixed pages.
+Dynamic Website	Content changes based on user interaction or data. Uses backend + database.	Facebook, YouTube, or an e-commerce site showing personalized results.
+
+
+9. Five Web Browsers and Their Rendering Engines
+Browser	Rendering Engine	Description
+Google Chrome	Blink	Fast and modern, based on Chromium.
+Mozilla Firefox	Gecko	Open-source and flexible.
+Safari	WebKit	Optimized for Apple devices.
+Microsoft Edge	Blink (formerly EdgeHTML)	Built on Chromium base for compatibility.
+Opera	Blink	Lightweight with built-in VPN and ad blocker.
+
+
+10. Basic Web Architecture Flow (Diagram)
++-------------+       HTTP Request       +-------------+        SQL Query        +-------------+
+|   Browser   | -----------------------> |   Web Server | ---------------------> |   Database  |
+|  (Client)   | <----------------------- |   (Backend)  | <--------------------- |   (DB)      |
++-------------+       HTTP Response      +-------------+        Data Response    +-------------+
+                        |
+                        |  ↕ (Optional)
+                        v
+                  +-------------+
+                  |     APIs    |
+                  | (3rd Party) |
+                  +-------------+
+
+
+Flow Summary:
+
+The client sends requests via the browser.
+
+The server handles logic and communicates with the database.
+
+APIs may fetch external data (e.g., weather, payment info).
