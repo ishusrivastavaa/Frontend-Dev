@@ -1,0 +1,29 @@
+/* q6.css - CSS-only responsive photo gallery with hover overlay */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, Helvetica, sans-serif;background:#eef2f6;color:#111;padding:2rem}
+.gallery-wrap{max-width:1100px;margin:0 auto}
+.gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+
+/* photo figure is a positioned container for overlay */
+.photo{
+  position:relative; overflow:hidden; border-radius:8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.photo img{
+  display:block; width:100%; height:220px; object-fit:cover; transition: transform 0.3s ease;
+}
+
+/* caption overlay (initially hidden) */
+.photo figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:0.8rem;
+  background:rgba(0,0,0,0.5); color:#fff; text-align:left;
+  transform: translateY(100%); opacity:0; transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* hover behavior: scale image and show caption */
+.photo:hover img{ transform: scale(1.1); }
+.photo:hover figcaption{ transform: translateY(0); opacity:1; }
+
+/* Responsive: change columns based on width */
+@media (max-width:900px){ .gallery{ grid-template-columns:repeat(2,1fr)} }
+@media (max-width:560px){ .gallery{ grid-template-columns:repeat(1,1fr)} }

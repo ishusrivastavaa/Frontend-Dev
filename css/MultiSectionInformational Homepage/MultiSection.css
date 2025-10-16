@@ -1,0 +1,51 @@
+/* q2.css - Multi-section informational page */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia, "Times New Roman", serif; line-height:1.6; background:#f7f9fb; color:#162029}
+.wrap{width:90%;margin:0 auto;padding:3rem 0}
+
+/* Header */
+header{background:#0b3b5a;color:#fff;position:sticky;top:0;z-index:30}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+header a{color:#dbeaf6;text-decoration:none;margin-left:1rem}
+
+/* Panels full-width backgrounds */
+.panel{min-height:60vh; display:flex; align-items:center; border-bottom:1px solid rgba(0,0,0,0.05)}
+.panel .content{background:rgba(255,255,255,0.85); padding:2rem; border-radius:6px; max-width:780px}
+
+/* Parallax-like fixed background sections (use background-attachment: fixed) */
+/* Example background images are placeholders — replace with real images if you have them */
+.parallax { 
+  background-image: url('history.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax-like effect */
+}
+.fixed-bg-2{
+  background-image: url('food.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* second parallax-like effect */
+}
+
+/* Gradient sections */
+.gradient.linear{
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.gradient.radial{
+  background: radial-gradient(circle at 20% 20%, #c1e1f4 0%, #fff 50%);
+}
+
+/* spacing for headings and paragraphs */
+h1{font-size:2rem;padding:0.5rem 0}
+h2{font-size:1.5rem;margin-bottom:0.5rem}
+p{margin-bottom:1rem;border-left:4px solid rgba(0,0,0,0.02); padding-left:0.75rem}
+
+/* Footer */
+footer{background:#082834;color:#cbe6e7;padding:1.25rem 0;text-align:center;margin-top:1rem}
+
+/* Responsive tuning */
+@media (max-width:700px){
+  .panel{min-height:50vh}
+  header .wrap{flex-direction:column;gap:0.5rem}
+  .panel .content{margin:0 1rem}
+}

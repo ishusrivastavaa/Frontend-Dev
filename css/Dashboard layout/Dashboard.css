@@ -1,0 +1,36 @@
+/* q8.css - Dashboard layout with fixed header and sidebar */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, Helvetica, sans-serif;background:#f6f8fb;color:#111}
+
+/* fixed header */
+.topbar{position:fixed;top:0;left:0;right:0;height:60px;background:#0b3b5a;color:#fff;display:flex;align-items:center;z-index:40}
+.topbar .wrap{width:90%;margin:0 auto;display:flex;align-items:center;justify-content:flex-start}
+
+/* layout container — margin-top to avoid header overlap */
+.layout{ display:flex; gap:1rem; align-items:flex-start; margin-top:70px; width:90%; max-width:1200px; margin-left:auto; margin-right:auto }
+
+/* sidebar: full-height using calc and viewport height */
+.sidebar{
+  width:220px;
+  min-height: calc(100vh - 90px); /* adapt to header */
+  background:#fff; border-radius:8px; padding:1rem;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+  position:sticky; top:80px; /* sticks under header */
+}
+
+/* content area fills remaining space */
+.content{flex:1}
+
+/* content boxes */
+.cards{display:flex;gap:1rem;margin-bottom:1rem}
+.card{
+  background:#fff;padding:1rem;border-radius:8px;flex:1;
+  box-shadow:0 8px 18px rgba(10,16,32,0.06);
+}
+
+/* On smaller screens stack sidebar above content */
+@media (max-width:900px){
+  .layout{ flex-direction:column; margin-top:80px }
+  .sidebar{ width:100%; position:relative; min-height: auto }
+  .cards{flex-direction:column}
+}

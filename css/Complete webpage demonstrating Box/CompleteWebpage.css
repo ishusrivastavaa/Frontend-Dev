@@ -1,0 +1,56 @@
+/* q10.css - Full layout demonstrating box model, positioning and responsive design */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, Helvetica, sans-serif;background:#f7f9fb;color:#111;line-height:1.6}
+
+/* Sticky header (uses position:sticky) */
+.site-header{position:sticky;top:0;background:rgba(11,59,92,0.95);color:#fff;z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 2rem}
+.brand{font-size:1.25rem}
+.nav a{color:#cfe7ff;text-decoration:none;margin-left:1rem}
+
+/* Hero with full background image and centered text (relative + absolute combination) */
+.hero{
+  height:60vh; background-image:url('hero.jpg'); background-size:cover; background-position:center;
+  display:flex; align-items:center; justify-content:center; position:relative;
+}
+.hero::after{
+  /* overlay using absolute positioning */
+  content:""; position:absolute; inset:0; background: linear-gradient(rgba(2,6,23,0.35), rgba(2,6,23,0.35));
+}
+.hero-inner{position:relative;color:#fff;text-align:center;padding:1rem}
+.hero-inner h2{font-size:2rem;margin-bottom:0.5rem}
+
+/* About section with two columns (grid) */
+.about{padding:3rem 2rem; background:linear-gradient(180deg, rgba(255,255,255,1), rgba(245,249,252,1))}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;max-width:1100px;margin:0 auto}
+
+/* Use margin, padding and borders to demonstrate box model */
+.about-text{padding:1.25rem;border:1px solid rgba(0,0,0,0.05);border-radius:8px}
+.about-image img{width:100%;border-radius:8px;display:block;}
+
+/* Services: three boxes in a row with equal height using flex */
+.services{padding:2rem}
+.service-grid{display:flex;gap:1rem;max-width:1100px;margin:0 auto}
+.service{flex:1;background:rgba(11,102,179,0.06);padding:1.25rem;border-radius:8px;box-shadow:0 8px 18px rgba(2,6,23,0.06);text-align:center}
+
+/* Contact form */
+.contact{padding:2rem;background:rgba(255,255,255,0.9)}
+.contact-form{max-width:700px;margin:0 auto;display:grid;gap:0.75rem}
+.contact-form label span{display:block;margin-bottom:0.25rem}
+.contact-form input, .contact-form textarea{width:100%;padding:0.65rem;border:1px solid #d9e6ef;border-radius:6px}
+.contact-form button{padding:0.65rem 1rem;background:#0b66b3;color:#fff;border:none;border-radius:6px;cursor:pointer}
+
+/* footer */
+.site-footer{text-align:center;padding:1rem 0;background:rgba(2,6,23,0.03);margin-top:1rem}
+
+/* Demonstrate outline property for accessibility focus */
+a:focus, input:focus, button:focus { outline: 3px solid rgba(11,102,179,0.18) }
+
+/* Use absolute positioning for a decorative element (example) */
+.hero-inner p{margin-top:0.4rem}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width:900px){
+  .about-inner{grid-template-columns:1fr}
+  .service-grid{flex-direction:column}
+}

@@ -1,0 +1,48 @@
+/* q4.css - Article styles demonstrating ::first-letter / ::first-line and mark */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family: 'Times New Roman', Times, serif; background:#fff8f0; color:#222; padding:2rem}
+.article{ max-width:900px; margin:0 auto; background:#fff; padding:2rem; border-radius:6px; box-shadow:0 8px 24px rgba(0,0,0,0.06) }
+
+header h1{font-size:2rem; margin-bottom:0.25rem}
+.meta{color:#666;margin-bottom:1rem}
+
+/* spacing between paragraphs */
+.body p{ margin: 1rem 0; text-align:justify; line-height:1.8; font-size:1rem; }
+
+/* style first letter and first line */
+.body p::first-letter {
+  font-size:2.5rem; /* large decorative first letter */
+  font-weight:700;
+  float:left;
+  line-height:1;
+  margin-right:0.4rem;
+  color:#a63d2a;
+}
+.body p::first-line {
+  font-weight:700; /* bold the first line */
+}
+
+/* mark styling for highlighted words */
+mark{
+  background:#ffecb3;
+  color:#5a3b00;
+  padding:0.1rem 0.25rem;
+  border-radius:3px;
+}
+
+/* blockquote emphasis with left border and background */
+blockquote{
+  margin:1.25rem 0;
+  padding:1rem 1rem;
+  border-left:6px solid #ffb703;
+  background:rgba(255,183,3,0.08);
+  font-style:italic;
+  color:#333;
+}
+
+/* responsive tweaks */
+@media (max-width:600px){
+  body{padding:1rem}
+  .article{padding:1rem}
+}
