@@ -1,0 +1,19 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Segoe UI,Arial;background:#fafafa;padding:2rem}
+.pricing{text-align:center}
+.cards{display:flex;gap:1rem;justify-content:center;margin-top:1rem;align-items:stretch}
+.card{background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.06);flex:1;transition:transform .3s;min-width:180px;animation:fadeIn .6s ease forwards;opacity:0}
+.card:hover{transform:translateY(-10px)}
+.featured{transform:scale(1.05);background:#f0f7ff;border:2px solid #d0e7ff}
+
+/* fade in animation */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Stack vertically below 750px */
+@media (max-width:750px){
+  .cards{flex-direction:column;align-items:center}
+  .featured{transform:none;width:100%}
+}
