@@ -1,0 +1,17 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;padding:2rem}
+.gallery h1{margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{background:#fff;border-radius:8px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between;min-height:140px;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:scale(1.05);transition:transform .3s;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.card h2{font-size:1rem;margin-bottom:.5rem}
+.price{font-weight:700;margin-top:auto}
+
+/* tablet: 2 cols */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+/* mobile: 1 col */
+@media (max-width:500px){
+  .grid{grid-template-columns:1fr}
+}
