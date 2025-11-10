@@ -1,0 +1,19 @@
+/* Advanced selectors demonstration */
+*{box-sizing:border-box}
+body{font-family:Arial;margin:24px}
+/* Attribute selectors: select only text inputs */
+input[type="text"]{border:2px solid #6c5ce7;padding:8px;border-radius:6px}
+/* href^= matches links that start with https */
+a[href^="https"]{font-weight:700}
+/* Pseudo-classes */
+a:hover{opacity:.8}
+input:focus{outline:3px solid rgba(108,92,231,.2)}
+/* nth-child example */
+.fancy-list li:nth-child(odd){background:#fafafa}
+/* combinators: > selects direct children */
+.links > li{margin-bottom:8px}
+/* + adjacent sibling and ~ general sibling examples */
+.fancy-list li + li{padding-left:12px}
+.fancy-list li ~ li{color:#333}
+/* pseudo-elements */
+.fancy-list li::before{content: "→ ";color:#00b894}

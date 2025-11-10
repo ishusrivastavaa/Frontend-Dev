@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Exploration</title>
+  <link rel="stylesheet" href="boxModel.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Box Model Exploration</h1>
+  </header>
+
+  <main class="center">
+    <section class="demo-wrapper">
+      <!-- Margin -> Border -> Padding -> Content -->
+      <div class="margin-layer">
+        <div class="border-layer">
+          <div class="padding-layer">
+            <div class="content">CONTENT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Parts of the Box Model</h2>
+      <ul>
+        <li><strong>Content:</strong> The actual text or elements inside the box.</li>
+        <li><strong>Padding:</strong> Space between the content and border.</li>
+        <li><strong>Border:</strong> The visible outline of the element.</li>
+        <li><strong>Margin:</strong> Space outside the border separating elements.</li>
+      </ul>
+      <p>Try toggling between <code>box-sizing: content-box</code> and <code>box-sizing: border-box</code> in the CSS to see the difference.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Box Model Demo — CSS Practice</p>
+  </footer>
+</body>
+</html>

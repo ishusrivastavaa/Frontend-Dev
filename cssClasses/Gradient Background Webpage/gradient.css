@@ -1,0 +1,10 @@
+/* Gradient backgrounds */
+*{box-sizing:border-box}
+body,html{height:100%;margin:0;font-family:Arial}
+.site-header,.site-footer{position:fixed;left:0;right:0;padding:12px;text-align:center;background:rgba(0,0,0,.6);color:#fff}
+.site-header{top:0}
+.site-footer{bottom:0}
+main{padding:80px 20px 80px}
+.linear{min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(120deg,#ff9a9e 0%,#fad0c4 100%)}
+.radial{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 30%,#a18cd1, #fbc2eb 60%);background-attachment:fixed}
+.linear h2,.radial h2{margin:.25rem 0}
