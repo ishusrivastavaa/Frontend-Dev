@@ -1,0 +1,153 @@
+/* ===============================
+   Global Layout & Reset
+   =============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9fafb;
+  color: #333;
+}
+
+header, footer {
+  background-color: #004aad;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ===============================
+   Main Layout
+   =============================== */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* ===============================
+   Button Showcase
+   =============================== */
+.button-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Base button styling */
+.btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   Button Variants
+   =============================== */
+/* Primary Button */
+.btn.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Secondary Button */
+.btn.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Outline Button */
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+/* Disabled Button */
+.btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+/* ===============================
+   Hover, Focus & Active Effects
+   =============================== */
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus state */
+.btn:focus {
+  outline: 3px solid #80bdff;
+  outline-offset: 2px;
+}
+
+/* Active state (pressed) */
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   Info Section
+   =============================== */
+.info {
+  max-width: 600px;
+  text-align: left;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 700px) {
+  main {
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .info {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   Footer (Sticky)
+   =============================== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  background: #004aad;
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,119 @@
+/* ===============================
+   Global Styles
+   =============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header, footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ===============================
+   Gallery Layout
+   =============================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ===============================
+   Image Card
+   =============================== */
+.image-card {
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+/* Overlay Effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+  border-radius: 10px;
+}
+
+/* Hover Effects */
+.img-container:hover img {
+  transform: scale(1.1);
+}
+
+.img-container:hover .overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Caption Styling */
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 700px) {
+  main {
+    padding: 1rem;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===============================
+   Footer (Sticky)
+   =============================== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  background: #004aad;
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

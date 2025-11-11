@@ -1,0 +1,157 @@
+/* ===============================
+   Base Layout & Typography
+================================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+/* ===============================
+   Main Section Layout
+================================*/
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+}
+
+/* Each example card */
+.example {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.example:hover {
+  transform: translateY(-5px);
+}
+
+/* ===============================
+   Pseudo-Class Demonstrations
+================================*/
+
+/* :hover example */
+.hover-link {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background: #2575fc;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+  background: #6a11cb;
+}
+
+/* :focus example */
+.focus-input {
+  padding: 0.6em;
+  width: 90%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.focus-input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+  outline: none;
+}
+
+/* :active example */
+.active-btn {
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 8px;
+  background: #6a11cb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.active-btn:active {
+  background: #4e0da6;
+  transform: scale(0.96);
+}
+
+/* :nth-child example */
+.nth-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.8em;
+}
+
+.nth-list li {
+  padding: 0.5em;
+  margin: 0.3em 0;
+  border-radius: 6px;
+  background: #e3e7ff;
+}
+
+/* Highlight every 2nd item */
+.nth-list li:nth-child(2n) {
+  background: #cfd9ff;
+  font-weight: 600;
+}
+
+/* ===============================
+   Footer (Sticky)
+================================*/
+footer {
+  background: #6a11cb;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Responsive Design
+================================*/
+@media (max-width: 768px) {
+  .examples {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .example {
+    width: 90%;
+  }
+}

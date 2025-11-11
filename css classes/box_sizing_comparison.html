@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="box-sizing-comparison.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison Demo</h1>
+  </header>
+
+  <main class="container">
+    <section class="comparison">
+      <!-- Default box-sizing (content-box) -->
+      <div class="box default-box">
+        <h2>Default: content-box</h2>
+        <p>The width <strong>does not include padding or border</strong>.  
+        The actual size becomes larger than specified.</p>
+      </div>
+
+      <!-- Border-box example -->
+      <div class="box border-box">
+        <h2>With box-sizing: border-box</h2>
+        <p>The width <strong>includes padding and border</strong>.  
+        The total size stays consistent as defined.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Box Model Comparison | Designed by Jai Chaudhary</p>
+  </footer>
+</body>
+</html>

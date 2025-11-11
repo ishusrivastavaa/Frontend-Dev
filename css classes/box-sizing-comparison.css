@@ -1,0 +1,98 @@
+/* ===== General Page Setup ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f4ff, #fafcff);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* ===== Main Section ===== */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ===== Comparison Section (Flexbox) ===== */
+.comparison {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* responsive stacking on small screens */
+}
+
+/* ===== Box Styles ===== */
+.box {
+  width: 250px; /* same width for comparison */
+  padding: 20px;
+  border: 6px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #e0ecff;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for both boxes */
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Default Box (content-box behavior) ===== */
+.default-box {
+  box-sizing: content-box; /* default behavior */
+  background-color: #a5b4fc;
+}
+
+/* ===== Border-Box Example ===== */
+.border-box {
+  box-sizing: border-box;
+  background-color: #93c5fd;
+}
+
+/* ===== Headings and Text ===== */
+.box h2 {
+  color: #1e3a8a;
+  margin-top: 0;
+}
+
+.box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 700px) {
+  .comparison {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}

@@ -1,0 +1,144 @@
+/* ===============================
+   Global & Layout Styling
+   =============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #004aad;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===============================
+   Element Selector
+   Targets all <p> elements
+   =============================== */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+/* ===============================
+   Class Selector (.highlight)
+   =============================== */
+.highlight {
+  background-color: #fff4cc;
+  border-left: 4px solid #f7b500;
+  padding: 0.5rem 1rem;
+}
+
+/* ===============================
+   ID Selector (#unique)
+   =============================== */
+#unique {
+  background-color: #e6f0ff;
+  color: #004aad;
+  border: 2px dashed #004aad;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* ===============================
+   Attribute Selectors
+   =============================== */
+a[href^="https"] {
+  color: #008000; /* Green for HTTPS links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a[href^="mailto"] {
+  color: #d63384; /* Pink for email links */
+  text-decoration: underline;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #ff6600;
+  transition: color 0.3s ease;
+}
+
+/* ===============================
+   Combinator Selectors
+   =============================== */
+/* Child selector (>) – direct children only */
+.combinator-demo > p {
+  color: #004aad;
+  font-weight: bold;
+}
+
+/* Adjacent sibling selector (+) – affects next element */
+.combinator-demo p + p {
+  color: #ff6600;
+}
+
+/* General sibling selector (~) – affects all following siblings */
+.combinator-demo p ~ ul {
+  background: #e6ffe6;
+  padding: 1rem;
+}
+
+/* Descendant selector – targets nested elements */
+.combinator-demo ul li {
+  color: #222;
+  margin-left: 1rem;
+  list-style: square;
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 700px) {
+  main {
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   Footer (Sticky)
+   =============================== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.9rem;
+}

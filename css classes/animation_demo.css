@@ -1,0 +1,103 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #2b6cb0;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* ===== Main Container ===== */
+.animation-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  gap: 40px;
+  padding: 20px;
+}
+
+/* ===== Moving Box Animation ===== */
+.move-box {
+  width: 150px;
+  height: 60px;
+  background-color: #3182ce;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+/* Keyframes for moving box (left to right) */
+@keyframes moveBox {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+/* ===== Bouncing Ball Animation ===== */
+.animation-ball {
+  width: 60px;
+  height: 60px;
+  background-color: #ed8936;
+  border-radius: 50%;
+  animation: bounce 1.5s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120px); }
+}
+
+/* ===== Color-Changing Text Animation ===== */
+.animation-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: colorChange 4s ease-in-out infinite alternate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Keyframes for color-changing text */
+@keyframes colorChange {
+  0% { color: #2b6cb0; }
+  50% { color: #38a169; }
+  100% { color: #d53f8c; }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #2d3748;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .move-box {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .animation-text {
+    font-size: 1.2rem;
+  }
+}
