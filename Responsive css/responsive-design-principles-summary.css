@@ -1,0 +1,120 @@
+/* ===============================
+   GENERAL STYLES
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+================================= */
+header {
+  text-align: center;
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ===============================
+   GRID LAYOUT
+================================= */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ===============================
+   PRINCIPLE BOXES
+================================= */
+.principle-box {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.principle-box h2 {
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.principle-box p {
+  margin-bottom: 1rem;
+}
+
+pre {
+  background-color: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Hover Effect */
+.principle-box:hover {
+  background: linear-gradient(135deg, #38bdf8, #3b82f6);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.principle-box:hover pre {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  text-align: center;
+  background-color: #1e293b;
+  color: white;
+  padding: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE BEHAVIOR
+================================= */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-box {
+    text-align: center;
+  }
+  pre{
+    font-size: 0.8rem;      
+
+  }
+}

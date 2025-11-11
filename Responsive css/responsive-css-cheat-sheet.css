@@ -1,0 +1,116 @@
+/* ============================================
+   Global & Base Styles
+   ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+header {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #ddd;
+}
+
+/* ============================================
+   Main Section (Grid Layout)
+   ============================================ */
+.cheat-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ============================================
+   Cheat Sheet Box Styles
+   ============================================ */
+.cheat-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cheat-box h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  color: #1e1e1e;
+}
+
+.cheat-box p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.cheat-box:hover {
+  background-color: #f0c330;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Footer Styles (Sticky)
+   ============================================ */
+footer {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive Design (Below 700px)
+   ============================================ */
+@media (max-width: 700px) {
+  .cheat-sheet {
+    grid-template-columns: 1fr;
+  }
+
+  .cheat-box {
+    text-align: left;
+    padding: 1.2rem;
+  }
+
+  .cheat-box h2 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+
+  .cheat-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}

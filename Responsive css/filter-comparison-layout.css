@@ -1,0 +1,106 @@
+/* ===============================
+   BASIC STYLES
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+================================= */
+header {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===============================
+   MAIN COMPARISON SECTION
+================================= */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.image-box {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+/* Filtered Image Effect */
+.filtered img {
+  filter: brightness(60%);
+}
+
+/* Hover Effect - Remove Filter Smoothly */
+.filtered img:hover {
+  filter: brightness(100%);
+  transform: scale(1.02);
+}
+
+/* Captions */
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 700px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-box {
+    width: 90%;
+  }
+
+  figcaption {
+    font-size: 0.95rem;
+  }
+}
