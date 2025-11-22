@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q2 Character Counter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #counter {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    #counter.normal { color: black; }
+    #counter.warning { color: orange; }
+    #counter.danger { color: red; }
+  </style>
+</head>
+<body>
+  <h2>Live Character Counter</h2>
+
+  <textarea id="message-box" rows="5" cols="40"
+    placeholder="Type your message (max 100 chars)..."></textarea>
+  <div id="counter" class="normal">100 characters left</div>
+  <button id="reset-btn">Reset</button>
+
+  <script src="characterCount.js"></script>
+</body>
+</html>

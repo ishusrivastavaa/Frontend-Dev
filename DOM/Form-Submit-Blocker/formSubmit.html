@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q9 Form Validation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .form-group { margin-bottom: 10px; }
+    .error-text { color: red; font-size: 0.9rem; }
+    #success-message { color: green; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Form with Live Validation</h2>
+
+  <form id="user-form" novalidate>
+    <div class="form-group">
+      <label>Name:
+        <input type="text" id="name-field" />
+      </label>
+      <div id="name-error" class="error-text"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Email:
+        <input type="email" id="email-field" />
+      </label>
+      <div id="email-error" class="error-text"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Password:
+        <input type="password" id="password-field" />
+      </label>
+      <div id="password-error" class="error-text"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="success-message"></div>
+
+  <script src="q9_form_validation.js"></script>
+</body>
+</html>

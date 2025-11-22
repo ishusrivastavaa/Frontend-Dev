@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q4 Theme Switcher</title>
+  <style>
+    body.light-theme { background: #ffffff; color: #000; }
+    body.dark-theme { background: #222; color: #fff; }
+    body.blue-theme { background: #003366; color: #e0f0ff; }
+
+    button { margin-right: 10px; padding: 6px 10px; }
+  </style>
+</head>
+<body class="light-theme">
+  <h2>Theme Switcher</h2>
+  <p>Current Theme is stored in data-theme on &lt;html&gt;.</p>
+
+  <button data-theme-btn="light">Light</button>
+  <button data-theme-btn="dark">Dark</button>
+  <button data-theme-btn="blue">Blue</button>
+
+  <script src="themeSwitcher.js"></script>
+</body>
+</html>
