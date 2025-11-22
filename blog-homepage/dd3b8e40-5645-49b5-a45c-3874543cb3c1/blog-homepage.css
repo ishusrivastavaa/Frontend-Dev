@@ -1,0 +1,51 @@
+/* ============================================
+   Custom Themed Blog Homepage
+   ============================================ */
+
+/* ✅ Override Bootstrap theme variables */
+:root {
+  --bs-primary: #8e44ad; /* Custom purple theme */
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+/* Apply global font */
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Header */
+header {
+  background-color: var(--bs-primary);
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: #732d91;
+}
+
+/* Headings */
+h1, h2, h5 {
+  font-weight: 600;
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
