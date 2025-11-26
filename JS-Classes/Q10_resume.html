@@ -1,0 +1,10 @@
+<form id='r'><input id='name'><input id='email'><input id='skills'><input id='git'><input id='ln'><button>Build</button></form><pre id='o'></pre>
+<script>
+r.onsubmit=e=>{
+ e.preventDefault();
+ if(!/^\S+@\S+\.\S+$/.test(email.value)) return alert("Bad email");
+ if(!git.value.startsWith("https://") || !ln.value.startsWith("https://")) return alert("Bad links");
+ let obj={name:name.value,email:email.value,skills:skills.value,github:git.value,linkedin:ln.value};
+ o.textContent=JSON.stringify(obj,null,2);
+};
+</script>

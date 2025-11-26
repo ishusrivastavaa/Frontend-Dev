@@ -1,0 +1,10 @@
+<form id='l'><input id='u'><input id='p'><button>Login</button></form><div id='o'></div>
+<script>
+l.onsubmit=e=>{
+ e.preventDefault();
+ let u=u.value, pw=p.value;
+ if(!/.{5,}/.test(u)){o.textContent='Username short'; return;}
+ if(!/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}/.test(pw)){o.textContent='Weak password'; return;}
+ o.textContent='Success';
+};
+</script>

@@ -1,0 +1,12 @@
+<form id='f'><input id='name'><span id='e1'></span><br><input id='email'><span id='e2'></span><br><input id='ph'><span id='e3'></span><br><input id='pw'><span id='e4'></span><br><button>Submit</button></form>
+<script>
+f.onsubmit=e=>{
+ e.preventDefault();
+ let n=name.value,em=email.value,p=ph.value,pw=pw.value;
+ const reN=/^[A-Za-z ]+$/, reE=/^\S+@\S+\.\S+$/, reP=/^\d{10}$/, rePW=/(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/;
+ e1.textContent=reN.test(n)?"":"Invalid"; 
+ e2.textContent=reE.test(em)?"":"Invalid";
+ e3.textContent=reP.test(p)?"":"Invalid";
+ e4.textContent=rePW.test(pw)?"":"Invalid";
+};
+</script>

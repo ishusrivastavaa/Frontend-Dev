@@ -1,0 +1,9 @@
+<form id='m'><input id='name'><input id='email'><input id='seats'><button>Book</button></form><pre id='out'></pre>
+<script>
+m.onsubmit=e=>{
+ e.preventDefault();
+ let n=name.value, em=email.value, s=seats.value;
+ if(!/^[A-Za-z ]+$/.test(n) || !/^\S+@\S+\.\S+$/.test(em) || !(s>=1 && s<=10)){ alert("Invalid"); return;}
+ let o={name:n,email:em,seats:s}; out.textContent=JSON.stringify(o,null,2);
+};
+</script>

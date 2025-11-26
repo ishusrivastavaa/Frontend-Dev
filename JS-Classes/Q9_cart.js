@@ -1,0 +1,1 @@
+class Cart{ constructor(){this.items=[];} add(n,p,q){this.items.push({n,p,q});} getTotal(){return this.items.reduce((a,b)=>a+b.p*b.q,0);} applyCoupon(c){ if(!/^(SAVE|DISC)\d+$/.test(c)) return this.getTotal(); let d=parseInt(c.match(/\d+/)[0]); return this.getTotal()*(1-d/100);} }
