@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q8 - Blog Manager</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    .post { border: 1px solid #aaa; padding: 10px; margin: 8px 0; }
+    .featured { border-color: gold; background: #fff8d8; }
+    .tag { background: #eef; padding: 5px; margin: 3px 0; font-size: 14px; }
+  </style>
+</head>
+
+<body>
+  <h1>Blog Manager</h1>
+
+  <input id="titleInput" placeholder="New post title">
+  <button id="addPostBtn">Add Post</button>
+  <button id="prependBtn">Prepend Featured</button>
+  <button id="removeLastBtn">Remove Last</button>
+
+  <br><br>
+
+  <input id="keyword" placeholder="Highlight keyword...">
+
+  <div id="postList">
+    <div class="post">Frontend Development</div>
+    <div class="post">Backend with Node.js</div>
+    <div class="post">Mastering HTML & CSS</div>
+    <div class="post">Why React is Popular</div>
+    <div class="post">Database Optimization Guide</div>
+  </div>
+
+  <script src="q8.js"></script>
+</body>
+</html>

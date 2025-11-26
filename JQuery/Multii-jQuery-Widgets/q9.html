@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q9 - Multi jQuery</title>
+
+  <!-- jQuery v1 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    var j1 = jQuery.noConflict(true);
+  </script>
+
+  <!-- jQuery v3 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    var j2 = jQuery.noConflict(true);
+  </script>
+
+  <style>
+    .widget { border: 1px solid #ccc; padding: 12px; margin: 8px 0; }
+    .active { border-color: blue; }
+  </style>
+</head>
+
+<body>
+
+  <h1>Multi jQuery Demo</h1>
+
+  <div id="carousel" class="widget">Carousel</div>
+  <div id="widget1" class="widget">Widget V1</div>
+
+  <div id="modalBox" class="widget">Open Modal (V2)</div>
+  <div id="widget2" class="widget">Widget V2</div>
+
+  <script src="q9.js"></script>
+</body>
+</html>

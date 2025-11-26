@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q10 - Registration Form</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    .error { border: 2px solid red; }
+    .success-message {
+      border: 2px solid green;
+      padding: 10px;
+      margin-top: 15px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Registration Form</h1>
+
+  <form id="regForm">
+    <label>Name:</label>
+    <input id="name"><br><br>
+
+    <label>Email:</label>
+    <input id="email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="q10.js"></script>
+</body>
+</html>
